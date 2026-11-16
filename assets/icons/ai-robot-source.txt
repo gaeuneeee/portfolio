@@ -1,0 +1,2 @@
+Apple robot emoji, original asset (unmodified)
+https://cdn.jsdelivr.net/npm/emoji-datasource-apple@16.0.0/img/apple/64/1f916.png
