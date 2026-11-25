@@ -800,13 +800,68 @@ body.project-cover-page .reels-case>.launchpad-close{color:#292723;background:#f
 /* ByteDance source mark, padded to match the existing tool tiles. */
 .cover-tool[src$="seedance-bytedance.svg"]{padding:9px;background:#fff;border-radius:22%}
 .project-tool-tag img[src$="seedance-bytedance.svg"]{padding:3px;background:#fff;border-radius:22%}
+
+/* Revision 085: clearer reading, compact mobile introduction and connected projects. */
+.profile-intro{font-size:16px;line-height:1.8}
+.profile-section p,.profile-contact-link{font-size:15px}
+.profile-section .education-date,.profile-section .education-course{font-size:14px}
+.profile-tools-grid .launchpad-tool-name{font-size:14px;line-height:1.4}
+.profile-contact-items .profile-social-links .profile-instagram{font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.desktop-hint-mobile{display:none}
+.icon .label{font-size:12px;font-weight:700;line-height:1.35}
+.project-page .project-intro .project-intro-copy{font-size:16px;line-height:1.7}
+.project-page .project-facts-layout dt{font-size:14px}
+.project-page .project-facts-layout dd{font-size:15px}
+.project-facts-main .project-role-fact{margin-bottom:24px}
+.project-film-caption,.project-end,.project-reference{font-size:14px}
+@media(max-width:760px){
+ :is(#profile-launchpad,.profile-genie-copy) .profile-panel{padding-top:28px}
+ .profile-header{grid-template-columns:88px minmax(0,1fr);gap:24px 20px;align-items:center}
+ .profile-header>.profile-copy{display:contents}
+ .profile-header>.profile-photo{width:88px;grid-column:1;grid-row:1;margin:0}
+ .profile-header :is(#profile-name,.profile-name){grid-column:2;grid-row:1;font-size:22px;line-height:1.5;margin:0;word-break:keep-all}
+ .profile-header .profile-intro{grid-column:1/-1;font-size:16px;line-height:1.8;margin:0}
+ .profile-section p,.profile-contact-link{font-size:15px}
+ .profile-section .education-date,.profile-section .education-course{font-size:14px}
+}
+@media(max-width:650px){
+ .desktop-hint-wide{display:none}.desktop-hint-mobile{display:inline}
+ .desktop-hint{font-size:12px;line-height:1.7;margin-top:18px;max-width:calc(100vw - 48px)}
+ .icon{width:min(148px,calc(50vw - 20px))}
+ .icon .label{font-size:11px;white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+ .dock-icon{font-size:10px}
+ .project-page .project-intro .project-intro-copy{font-size:16px}
+}
+@media(max-width:360px){.dock-icon{font-size:9px}.profile-header{grid-template-columns:72px minmax(0,1fr);gap:20px 16px}.profile-header>.profile-photo{width:72px}.profile-header :is(#profile-name,.profile-name){font-size:20px}}
+
+/* Revision 086: quiet desktop labels and a subtitle-free interview project cover. */
+#project-screen[data-project="interview"] .project-cover-background{background-position:62% 32%}
+#project-screen[data-project="interview"] .project-cover-background img{object-position:62% 32%}
+
+/* Revision 089: pull the interview photograph back within the full-screen cover. */
+#project-screen[data-project="interview"] .project-cover-background{background:#111!important}
+#project-screen[data-project="interview"] .project-cover-background img{position:absolute;left:50%;top:0;transform:translateX(-50%);width:min(100%,138dvh);height:auto;max-width:none;object-fit:contain;object-position:center;mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 65%,transparent);mask-composite:intersect;-webkit-mask-image:linear-gradient(to right,transparent,#000 12%,#000 88%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 65%,transparent);-webkit-mask-composite:source-in}
+@media(max-width:650px){#project-screen[data-project="interview"] .project-cover-background img{width:150%;top:8dvh}}
+
+/* Revision 090: personal fan edits, with the shared cover and project structure. */
+#fan-edits .project-app-icon{border-radius:16px}
+#project-screen[data-project="fan-edits"] .fan-cover-background{background:#141414}
+.fan-cover-stills{position:absolute;right:4%;top:7%;width:48%;height:77%;display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:18px;transform:rotate(-5deg)}
+.fan-cover-stills img{width:100%;height:100%;object-fit:contain;background:#080808}
+#project-screen[data-project="fan-edits"] .project-cover::before{background:linear-gradient(90deg,#111 0%,#111c 32%,#1110 68%),linear-gradient(to top,#000e 0%,#0007 20%,transparent 55%)}
+#project-screen[data-project="fan-edits"] .cover-heading-row h2{max-width:55%}
+.fan-film-section{margin-top:72px}
+.fan-film-heading{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;margin-bottom:28px;align-items:start}
+.fan-film-heading h3{font-size:32px;line-height:1.3;margin:0;font-weight:600;letter-spacing:-.025em}
+.fan-film-heading p{font-size:16px;line-height:1.7;color:#606060;margin:0;word-break:keep-all}
+@media(max-width:760px){.fan-film-heading{grid-template-columns:1fr;gap:16px}.fan-film-heading h3{font-size:26px}.fan-film-section{margin-top:48px}.fan-cover-stills{right:-14%;top:8%;width:90%;height:55%;gap:12px}#project-screen[data-project="fan-edits"] .project-cover::before{background:linear-gradient(to top,#111 0%,#111e 28%,#1114 58%,#1113 100%)}#project-screen[data-project="fan-edits"] .cover-heading-row h2{max-width:100%}}
 </style>
 <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="menu-screen-open screen-visible profile-view-open profile-before-end">
 <img class="wallpaper" src="assets/creative-wallpaper.webp" alt="" draggable="false">
 <div class="wallpaper-type" aria-hidden="true" draggable="false">
- <p class="wallpaper-copy"><span class="wallpaper-line wallpaper-contents" data-word="Contents">Contents</span><br><span class="wallpaper-line wallpaper-portfolio" data-word="Portfolio">Portfolio</span><span class="desktop-hint">데스크톱 환경에 최적화되어 있습니다.<br>작업물은 구글 드라이브에서도 열람하실 수 있습니다.</span></p>
+ <p class="wallpaper-copy"><span class="wallpaper-line wallpaper-contents" data-word="Contents">Contents</span><br><span class="wallpaper-line wallpaper-portfolio" data-word="Portfolio">Portfolio</span><span class="desktop-hint"><span class="desktop-hint-wide">아이콘을 눌러 작업물을 열어보세요.</span><span class="desktop-hint-mobile">작업물을 누르면 자세히 볼 수 있어요.</span><br>전체 파일은 하단 Google Drive에서 확인할 수 있습니다.</span></p>
 </div>
 
 
@@ -847,20 +902,21 @@ function initial(){
  const available=dockRestTop()-topOffset()-16;
  const mobile=innerWidth<650;
  const rows=Math.ceil(items.length/2);
- const rowHeight=Math.max(48,(available-(innerWidth<650?290:0))/rows);
+ const mobileStart=clamp(190,innerHeight*.29,260);
+ const rowHeight=Math.max(48,(available-(mobile?mobileStart:0))/rows);
  const commonWidth=mobile?Math.min(112,(innerWidth-68)/3,Math.max(24,Math.min(72,rowHeight-30))*16/9):112;
  document.documentElement.style.setProperty('--thumb-width',commonWidth+'px');
  items.forEach((el,i)=>{
   el.style.removeProperty('--preview-width');el.style.removeProperty('--folder-width');
   if(mobile){
-   const start=290;
+   const start=mobileStart;
    const step=Math.max(48,(available-start)/rows);
-   const imageHeight=Math.max(24,Math.min(72,step-30));
+   const imageHeight=Math.max(24,Math.min(68,step-48));
    el.style.setProperty('--preview-width',(el.classList.contains('portrait')?imageHeight*.75:Math.min(112,imageHeight*16/9))+'px');
    el.style.setProperty('--folder-width',Math.min(68,imageHeight*90/73)+'px');
    place(el,(innerWidth/2)*(i%2)+(innerWidth/2-el.offsetWidth)/2,start+Math.floor(i/2)*step);
   }else{
-   const positions=[[.55,.12],[.76,.23],[.94,.10],[.53,.52],[.83,.59],[.96,.82],[.63,.86],[.72,.50]];
+   const positions=[[.55,.12],[.76,.23],[.94,.10],[.53,.52],[.83,.63],[.96,.88],[.63,.88],[.96,.42],[.72,.48]];
    const [x,y]=positions[i];place(el,x*(innerWidth-el.offsetWidth),y*Math.max(300,available-el.offsetHeight));
   }
  });
@@ -884,7 +940,8 @@ const projectSpecs=[
  ['headphone-ad','video','SONY AI AD','app','#9f8c87'],
  ['gpt-ad','video','ChatGPT AI AD','app','#779e99'],
  ['daegu-lulu','work','대구루루','app','#c6a282'],
- ['interview','work','INTERVIEW','app','#555555']
+ ['interview','work','INTERVIEW','app','#555555'],
+ ['fan-edits','video','FAN EDITS','app','#e52d27']
 ];
 projectSpecs.forEach(([id,category,title,shape,color])=>{const el=document.createElement('button');el.id=id;el.className='item icon project '+(shape==='folder'?'folder-project':shape);el.dataset.category=category;el.setAttribute('aria-label',title+' 보기');el.style.setProperty('--project-color',color);if(shape==='folder'){const icon=document.createElement('img');icon.className='folder-original';icon.src=id==='green-supporters'?'assets/Folder-green.png':'assets/Folder-blue.png';icon.alt='';icon.draggable=false;el.append(icon)}else{const preview=document.createElement('span');preview.className='preview';preview.innerHTML='<span class="preview-caption">'+(shape==='portrait'?'3:4':'16:9')+'</span>';el.append(preview)}const label=document.createElement('span');label.className='label';label.textContent=title;el.append(label);desktop.insertBefore(el,folder)});
 const drive=document.createElement('button');drive.id='drive';drive.className='item icon drive-icon';drive.setAttribute('aria-label','Drive, 드래그로 이동');drive.innerHTML='<img src="data:image/png;base64,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" alt="" draggable="false"><span class="label">Drive</span>';desktop.append(drive);
@@ -894,7 +951,7 @@ const sonyIcon=document.createElement('img');sonyIcon.className='project-app-ico
 document.querySelector('#headphone-ad .preview').replaceWith(sonyIcon);
 const chatgptIcon=document.createElement('img');chatgptIcon.className='project-app-icon chatgpt-project-icon';chatgptIcon.src='assets/icons/chatgpt.jpg';chatgptIcon.alt='';chatgptIcon.draggable=false;
 document.querySelector('#gpt-ad .preview').replaceWith(chatgptIcon);
-[['typography','assets/icons/textedit.png'],['interview','assets/icons/ios-video-camera.png']].forEach(([id,src])=>{
+[['typography','assets/icons/textedit.png'],['interview','assets/icons/ios-video-camera.png'],['fan-edits','assets/icons/youtube-app.jpg']].forEach(([id,src])=>{
  const image=document.createElement('img');image.className='project-app-icon';image.src=src;image.alt='';image.draggable=false;
  document.querySelector('#'+id+' .preview').replaceWith(image);
 });
@@ -924,7 +981,7 @@ toolsData.push(['Workspace','Notion','assets/icons/notion.png']);
 toolsData.push(['AI','ChatGPT','assets/icons/chatgpt.jpg']);
 toolsData.push(['AI','AI Video Production','assets/icons/ai-robot.png']);
 const profileSkills=toolsData.map(tool=>tool[1]==='ChatGPT'?['Video','Videography','assets/icons/ios-video-camera.png']:tool);
-profileSkills.forEach(([brand,name,src])=>{const el=document.createElement('li');el.className='launchpad-tool';const image=document.createElement('img');image.className='program-logo'+(name==='Blender'?' blender-logo':'');image.src=src;image.alt='';image.draggable=false;const title=document.createElement('span');title.className='launchpad-tool-name';const top=document.createElement('span');top.className='program-brand';top.textContent=brand;const bottom=document.createElement('span');bottom.textContent=name;title.append(top,bottom);el.append(image,title);toolsGrid.append(el)});
+profileSkills.forEach(([brand,name,src])=>{const el=document.createElement('li');el.className='launchpad-tool';const image=document.createElement('img');image.className='program-logo'+(name==='Blender'?' blender-logo':'');image.src=src;image.alt='';image.draggable=false;const title=document.createElement('span');title.className='launchpad-tool-name';const top=document.createElement('span');top.className='program-brand';top.textContent=brand;const bottom=document.createElement('span');bottom.textContent=name==='AI Video Production'?'AI Video':name;if(name==='AI Video Production'){bottom.style.whiteSpace='nowrap';bottom.title='AI Video Production';bottom.setAttribute('aria-label','AI 영상 제작');}title.append(top,bottom);el.append(image,title);toolsGrid.append(el)});
 let toolsOpen=false;
 toolsButton.setAttribute('aria-controls',launchpad.id);toolsButton.setAttribute('aria-haspopup','dialog');
 let toolsAnimation;
@@ -944,7 +1001,7 @@ launchpad.addEventListener('click',e=>{if(!e.target.closest('.launchpad-tool,.la
 toolsButton.addEventListener('click',toggleTools);
 const profile=document.createElement('div');
 profile.id='profile-launchpad';profile.className='tools-launchpad';profile.hidden=true;profile.setAttribute('role','dialog');profile.setAttribute('aria-labelledby','profile-name');
-profile.innerHTML=`<button type="button" class="launchpad-close">닫기</button><section class="profile-panel"><div class="profile-photo" role="img" aria-label="프로필 사진 자리, 3대4 비율"><span>3:4</span>PROFILE PHOTO</div><div class="profile-copy"><h2 id="profile-name"><strong>한 장의 디자인</strong>부터 <strong>한 편의 영상</strong>까지 만드는<br><strong>컨텐츠 디자이너</strong> 김가은 입니다.</h2><p class="profile-intro">같은 장면도 어디서 자르고, 어떤 소리를 얹느냐에 따라 다른 이야기가 됩니다. 저는 그 차이를 만드는 일을 좋아합니다. 필요한 그래픽과 썸네일을 직접 만들고, 블렌더로 형태를 만들거나 AI로 만든 소스를 편집에 가져옵니다. 여러가지 도구로 다양한 표현을 시도합니다.</p><section class="profile-section profile-toolkit" aria-labelledby="profile-toolkit-title"><h3 id="profile-toolkit-title">CREATIVE TOOLKIT</h3></section><section class="profile-section"><h3>EDUCATION</h3><div class="education-grid"><div class="education-entry"><p class="education-date">2026.06 — 2026.11</p><p>그림컴퓨터아트학원</p><p class="education-course">AI 기반 영상콘텐츠 제작실무 양성과정</p></div><div class="education-entry"><p class="education-date">2024.03 — 2026.02 · 졸업</p><p>대구보건대학 · 뷰티코디네이션학과</p></div><div class="education-entry"><p class="education-date">2018.03 — 2019.01</p><p>영진직업전문학교</p><p class="education-course">시각(옥외광고)디자인 양성과정</p></div><div class="education-entry"><p class="education-date">2017.09 — 2019.03</p><p>SBS아카데미컴퓨터아트학원</p><p class="education-course">시각 편집디자이너 양성과정</p></div></div></section><section class="profile-section"><h3>CONTACT</h3><p><a class="profile-contact-link" href="mailto:kimnine00@gmail.com"><img src="assets/icons/contact-mail.svg" alt="" width="17" height="17">kimnine00@gmail.com</a></p><p><a class="profile-contact-link" href="tel:01040113130"><img src="assets/icons/contact-phone.svg" alt="" width="17" height="17">010-4011-3130</a></p></section><a class="profile-instagram" href="https://www.instagram.com/nueag.a/" target="_blank" rel="noopener noreferrer" aria-label="인스타그램 nueag.a 새 창에서 보기">Instagram <span>@nueag.a</span> ↗</a></div></section>`;
+profile.innerHTML=`<button type="button" class="launchpad-close">닫기</button><section class="profile-panel"><div class="profile-photo" role="img" aria-label="프로필 사진 자리, 3대4 비율"><span>3:4</span>PROFILE PHOTO</div><div class="profile-copy"><h2 id="profile-name"><strong>한 장의 디자인</strong>부터 <strong>한 편의 영상</strong>까지 만드는<br><strong>콘텐츠 디자이너</strong> 김가은 입니다.</h2><p class="profile-intro">같은 장면도 어디서 자르고, 어떤 소리를 얹느냐에 따라 다른 이야기가 됩니다. 저는 그 차이를 만드는 일을 좋아합니다. 필요한 그래픽과 썸네일을 직접 만들고, 블렌더로 형태를 만들거나 AI로 만든 소스를 편집에 가져옵니다. 여러 가지 도구로 다양한 표현을 시도합니다.</p><section class="profile-section profile-toolkit" aria-labelledby="profile-toolkit-title"><h3 id="profile-toolkit-title">CREATIVE TOOLKIT</h3></section><section class="profile-section"><h3>EDUCATION</h3><div class="education-grid"><div class="education-entry"><p class="education-date">2026.06 — 2026.11</p><p>그림컴퓨터아트학원</p><p class="education-course">AI 기반 영상콘텐츠 제작실무 양성과정</p></div><div class="education-entry"><p class="education-date">2024.03 — 2026.02 · 졸업</p><p>대구보건대학 · 뷰티코디네이션학과</p></div><div class="education-entry"><p class="education-date">2018.03 — 2019.01</p><p>영진직업전문학교</p><p class="education-course">시각(옥외광고)디자인 양성과정</p></div><div class="education-entry"><p class="education-date">2017.09 — 2019.03</p><p>SBS아카데미컴퓨터아트학원</p><p class="education-course">시각 편집디자이너 양성과정</p></div></div></section><section class="profile-section"><h3>CONTACT</h3><p><a class="profile-contact-link" href="mailto:kimnine00@gmail.com"><img src="assets/icons/contact-mail.svg" alt="" width="17" height="17">kimnine00@gmail.com</a></p><p><a class="profile-contact-link" href="tel:01040113130"><img src="assets/icons/contact-phone.svg" alt="" width="17" height="17">010-4011-3130</a></p></section><a class="profile-instagram" href="https://www.instagram.com/nueag.a/" target="_blank" rel="noopener noreferrer" aria-label="인스타그램 nueag.a 새 창에서 보기">Instagram <span>@nueag.a</span> ↗</a></div></section>`;
 // Three tiers: introduction, interview/toolkit, and education/contact.
 const profilePanel=profile.querySelector('.profile-panel');
 const profileCopy=profile.querySelector('.profile-copy');
@@ -1078,7 +1135,7 @@ interviewDialog.addEventListener('keydown',event=>event.stopPropagation());
 interviewDialog.addEventListener('click',event=>{if(event.target===interviewDialog)closeInterview()});
 profile.querySelector('#profile-name').classList.add('profile-name');
 const profileTitle=profile.querySelector('#profile-name');
-profileTitle.setAttribute('aria-label','한 장의 디자인부터 한 편의 영상까지 만드는 컨텐츠 디자이너 김가은 입니다.');
+profileTitle.setAttribute('aria-label','한 장의 디자인부터 한 편의 영상까지 만드는 콘텐츠 디자이너 김가은 입니다.');
 const profileTools=profile.querySelector('.profile-toolkit');
 toolsGrid.className='profile-tools-grid';profileTools.append(toolsGrid);
 toolsButton.closest('.dock-slot').remove();
@@ -1121,6 +1178,7 @@ profileCue.addEventListener('click',()=>{const screen=projectOpen?projectScreen:
 addEventListener('resize',()=>requestAnimationFrame(()=>{updateProjectChrome();updateScreenScrollCue()}));
 new ResizeObserver(updateScreenScrollCue).observe(profile.querySelector('.profile-panel'));
 
+let routeReady=false,applyingRoute=false;
 let profileOpen=false,profileGenie=null,profileOpenRevision=0;
 const menuBackdrop=document.createElement('div');menuBackdrop.className='menu-backdrop';menuBackdrop.hidden=true;menuBackdrop.setAttribute('aria-hidden','true');document.body.append(menuBackdrop);
 let backdropAnimation;
@@ -1200,7 +1258,8 @@ function animateProfileGenie(opening){
  };
  state.frame=requestAnimationFrame(step);
 }
-function setProfile(opening,animate=true){
+function setProfile(opening,animate=true,updateRoute=true){
+ if(updateRoute)writePortfolioRoute(opening?'profile':'works');
  stopScreenScroll(profile);
  const revision=++profileOpenRevision;
  profileOpen=opening;profile.hidden=false;profileButton.setAttribute('aria-expanded',String(opening));
@@ -1220,7 +1279,7 @@ function setProfile(opening,animate=true){
 }
 addEventListener('resize',()=>{if(profileGenie)finishProfileMotion()});
 function closeProfile(){stopScreenScroll(profile);if(profileOpen)setProfile(false)}
-profileButton.addEventListener('click',e=>{if(suppressClick(profileButton,e))return;if(profileOpen){closeProfile();return}closeProjectScreen(false);closeTools();setProfile(true)});
+profileButton.addEventListener('click',e=>{if(suppressClick(profileButton,e))return;if(profileOpen){closeProfile();return}closeProjectScreen(false,false);closeTools();setProfile(true)});
 profile.querySelector('.launchpad-close').addEventListener('click',closeProfile);
 profile.addEventListener('click',e=>{if(e.target===profile)closeProfile()});
 // One desktop icon = one project. Add each Figma-designed page to its content later.
@@ -1232,12 +1291,19 @@ const projectPages=Object.fromEntries(categoryProjects.map(trigger=>[trigger.id,
  content:''
 }]));
 Object.assign(projectPages,{
+ 'fan-edits':{
+  title:'FAN EDITS · 개인 편집 작업',cover:true,coverType:'fan',year:'2025–2026',tools:['Premiere Pro','After Effects'],
+  films:[
+   {id:'h4Xw3RJOehE',title:'NEON',description:'형광색 타이포그래피와 흑백 화면의 대비를 활용한 팬 에딧입니다. 큰 글자와 색의 변화로 화면에 시각적인 포인트를 더했습니다.'},
+   {id:'4fXCDNP1h4w',title:'I’ll Like You',description:'분홍색 그래픽과 화면 질감을 활용한 팬 에딧입니다. 가사의 의미를 화면 구성으로 표현하고, 장면마다 다른 분위기를 연결했습니다.'}
+  ]
+ },
  'daegu-lulu':{"title": "대구루루 · 로컬 콘텐츠 채널 운영", "cover": true, "coverType": "reels", "logo": "assets/portfolio/ruru-channel-logo.png", "reels": [{"id": "QOeYfDSh8TE", "title": "한옥집김치찜", "role": "촬영 · 편집", "instagram": "https://www.instagram.com/ruru.daegu/reel/DfEoqLChsRP/", "metrics": {"views": "7.7만", "saves": 1048, "shares": 3086}, "thumbnail": "assets/portfolio/ruru-thumb-QOeYfDSh8TE.webp"}, {"id": "_awMLisRf54", "title": "만석대구막창 만촌본점", "role": "촬영 · 편집", "instagram": "https://www.instagram.com/ruru.daegu/reel/Dc-WZlAquH0/", "metrics": {"views": 833, "saves": 0, "shares": 3}, "thumbnail": "assets/portfolio/ruru-thumb-_awMLisRf54.webp"}, {"id": "nkmutRy9NMQ", "title": "공평우동 본점", "role": "편집", "instagram": "https://www.instagram.com/ruru.daegu/reel/Dce_5rqPeXC/", "metrics": {"views": 1578, "saves": 7, "shares": 11}, "thumbnail": "assets/portfolio/ruru-thumb-nkmutRy9NMQ.webp"}, {"id": "aq5Yh6oqUy0", "title": "빵굽는 커피공장", "role": "촬영", "instagram": "https://www.instagram.com/ruru.daegu/reel/DcNzsztq6Bn/", "metrics": {"views": 3977, "saves": 9, "shares": 29}, "thumbnail": "assets/portfolio/ruru-thumb-aq5Yh6oqUy0.webp"}, {"id": "4fQBxKcUYz4", "title": "신라식당 본점", "role": "촬영", "instagram": "https://www.instagram.com/ruru.daegu/reel/Dcs5960qwts/", "metrics": {"views": 1455, "saves": 3, "shares": 10}, "thumbnail": "assets/portfolio/ruru-thumb-4fQBxKcUYz4.webp"}, {"id": "heSsXnFGEow", "title": "어랑회랑 대구 본점", "role": "촬영", "instagram": "https://www.instagram.com/ruru.daegu/reel/Dcx3TiLqO9E/", "metrics": {"views": 585, "saves": 0, "shares": 1}, "thumbnail": "assets/portfolio/ruru-thumb-heSsXnFGEow.webp"}], "metricsDate": "2026.11.17", "coverImages": ["assets/portfolio/ruru-cover-01.webp", "assets/portfolio/ruru-cover-02.webp", "assets/portfolio/ruru-cover-03.webp", "assets/portfolio/ruru-cover-04.webp", "assets/portfolio/ruru-cover-05.webp", "assets/portfolio/ruru-cover-06.webp", "assets/portfolio/ruru-cover-07.webp", "assets/portfolio/ruru-cover-08.webp", "assets/portfolio/ruru-cover-09.webp", "assets/portfolio/ruru-cover-10.webp", "assets/portfolio/ruru-cover-11.webp", "assets/portfolio/ruru-cover-12.webp", "assets/portfolio/ruru-cover-13.webp", "assets/portfolio/ruru-cover-14.webp"]},
  'thumbnails':{"title": "상세페이지", "cover": "assets/portfolio/detail/rhythm-game.jpg", "coverType": "detail", "year": "2023", "contribution": 100, "tools": ["Photoshop", "Illustrator"], "works": [{"title": "SUPERSTAR PLEDIS", "subtitle": "리듬게임 웹 광고", "src": "assets/portfolio/detail/rhythm-game.jpg", "width": 1440, "height": 2850, "description": "게임 화면과 아티스트 카드를 중심으로 플레이 방식과 보상 정보를 순서대로 구성했습니다. 핑크·피치 계열의 색감과 다각형 배경으로 밝고 경쾌한 분위기를 만들고, 게임 소개에서 사전 예약 안내로 시선이 이어지도록 배치했습니다."}, {"title": "에뛰드 × 킷캣", "subtitle": "오리지널 에디션", "src": "assets/portfolio/detail/etude-original.jpg", "width": 1440, "height": 4750, "description": "킷캣의 레드 컬러와 초콜릿 이미지를 활용해 컬래버레이션 제품의 특징을 강조했습니다. 제품 구성, 컬러별 발색, 메이크업 이미지, 사용 방법 순으로 정보를 정리해 제품의 매력을 구체적으로 보여주는 상세페이지입니다."}, {"title": "에뛰드 × 킷캣", "subtitle": "스트로베리 티라미수 에디션", "src": "assets/portfolio/detail/etude-tiramisu.jpg", "width": 1440, "height": 4750, "description": "같은 시리즈의 정보 구조를 유지하면서 코럴·핑크 컬러와 딸기·디저트 이미지로 다른 제품 분위기를 표현했습니다. 발색과 구성품을 비교하기 쉽게 정리하고, 밝은 포인트 컬러로 주요 정보를 구분했습니다."}]},
  'green-supporters':{"title": "그린 콘텐츠 서포터즈 1기", "cover": "assets/portfolio/green/series-1/1.png", "coverType": "cards", "year": "2026", "tools": ["Figma", "Illustrator", "Notion", "ChatGPT"], "series": [["assets/portfolio/green/series-1/1.png", "assets/portfolio/green/series-1/2.png", "assets/portfolio/green/series-1/3.png", "assets/portfolio/green/series-1/4.png", "assets/portfolio/green/series-1/5.png", "assets/portfolio/green/series-1/6.png", "assets/portfolio/green/series-1/7.png", "assets/portfolio/green/series-1/8.png"], ["assets/portfolio/green/series-2/00.png", "assets/portfolio/green/series-2/01.png", "assets/portfolio/green/series-2/02.png", "assets/portfolio/green/series-2/03.png", "assets/portfolio/green/series-2/04.png", "assets/portfolio/green/series-2/05.png", "assets/portfolio/green/series-2/06.png"]], "logos": [{"src": "assets/portfolio/green-profile.png", "label": "프로필 로고"}, {"src": "assets/portfolio/green-logo-01.png", "label": "컬러 로고"}, {"src": "assets/portfolio/green-logo-02.png", "label": "라인 로고"}]},
  'interview':{
-  title:'INTERVIEW · 컨텐츠 디자이너 김가은',titleLines:['INTERVIEW','컨텐츠 디자이너 김가은'],
-  cover:true,coverType:'image',poster:'https://i.ytimg.com/vi/'+profileLinks.interviewYoutube+'/maxresdefault.jpg',
+  title:'INTERVIEW · 콘텐츠 디자이너 김가은',titleLines:['INTERVIEW','콘텐츠 디자이너 김가은'],
+  cover:true,coverType:'image',poster:'assets/IMG_1193.JPG',
   youtube:profileLinks.interviewYoutube,year:'2026',contribution:100,tools:['카메라','Premiere Pro','After Effects'],
   role:'촬영 · 편집',heading:'한 장의 디자인부터 한 편의 영상까지',
   description:'저를 소개하는 인터뷰 영상입니다. 촬영과 편집을 직접 담당하고, Premiere Pro와 After Effects를 활용해 완성했습니다.',
@@ -1247,7 +1313,7 @@ Object.assign(projectPages,{
   title:'사건의 지평선 · 키네틱 타이포그래피 모작',titleLines:['사건의 지평선','키네틱 타이포그래피 모작'],
   cover:'assets/portfolio/typomain_highlight_5s.mp4',poster:'assets/portfolio/typomain-poster.jpg',
   youtube:'piCdjbn2-9s',reference:'nschFfLFCdo',year:'2026',contribution:100,tools:['After Effects'],
-  heading:'글자의 움직임으로 이어지는 장면',
+  role:'키네틱 타이포그래피 모작',heading:'글자의 움직임으로 이어지는 장면',
   description:'「사건의 지평선」을 주제로 한 키네틱 타이포그래피 모작입니다.\nAfter Effects로 제작한 작업을 하이라이트와 전체 영상으로 소개합니다.',
   note:'기존 작품을 참고한 학습용 모작입니다.'
  },
@@ -1255,7 +1321,7 @@ Object.assign(projectPages,{
   title:'카카오페이 · 타이포그래피 광고 모작',titleLines:['카카오페이','타이포그래피 광고 모작'],
   cover:'assets/portfolio/adcopy_highlight_5s.mp4',poster:'assets/portfolio/adcopy-poster.jpg',
   youtube:'qD8Vpv5D6qA',reference:'1MgPl2K_mjA',year:'2026',contribution:100,tools:['After Effects'],
-  heading:'타이포그래피로 전하는 광고 메시지',
+  role:'타이포그래피 광고 모작',heading:'타이포그래피로 전하는 광고 메시지',
   description:'카카오페이 광고를 참고해 제작한 타이포그래피 모작입니다.\n원본 영상 링크에서 참고한 광고를 함께 확인할 수 있습니다.',
   note:'카카오페이 원본 광고를 참고한 학습용 모작입니다.'
  },
@@ -1263,16 +1329,16 @@ Object.assign(projectPages,{
   title:'SONY WH-1000XM6 · AI 광고 제작',titleLines:['SONY WH-1000XM6','AI 광고 제작'],
   cover:'assets/portfolio/headphones_highlight_5s.mp4',poster:'assets/portfolio/headphones-poster.jpg',
   youtube:'SScCtX8i-IA',year:'2026',contribution:80,tools:['After Effects','Premiere Pro','Seedance 2.5'],
-  heading:'AI로 만든 장면을 하나의 광고로',
-  description:'SONY WH-1000XM6를 주제로 제작한 팀 과제입니다. AI를 활용한 광고 제작 과정에서 영상 편집을 담당했습니다. After Effects와 Premiere Pro를 사용했습니다.',
+  role:'영상 편집',heading:'AI로 만든 장면을 하나의 광고로',
+  description:'SONY WH-1000XM6를 주제로 제작한 팀 과제입니다.\nAI로 제작한 영상 소스를 활용했으며, 저는 After Effects와 Premiere Pro를 사용한 영상 편집을 담당했습니다.',
   note:''
  },
  'gpt-ad':{
   title:'불안을 질문으로, ChatGPT · AI 광고 제작',titleLines:['불안을 질문으로, ChatGPT','AI 광고 제작'],
   cover:'assets/portfolio/chatgpt_highlight_5s.mp4',poster:'assets/portfolio/chatgpt-poster.jpg',
   youtube:'0F2FcDi8H2c',year:'2026',contribution:100,tools:['After Effects','Premiere Pro','Seedance 2.5'],
-  heading:'불안을 질문으로 바꾸는 이야기',
-  description:'「ChatGPT」를 주제로 제작한 AI 광고입니다. After Effects와 Premiere Pro를 활용해 제작했습니다.',
+  role:'AI 광고 영상 제작 · 편집',heading:'불안을 질문으로 바꾸는 이야기',
+  description:'ChatGPT를 주제로 제작한 AI 광고입니다.\nAI 영상 소스를 활용하고, After Effects와 Premiere Pro로 편집해 광고 영상으로 완성했습니다.',
   note:'AI를 활용한 광고 제작 포트폴리오입니다.',notePlacement:'film'
  }
 });
@@ -1307,8 +1373,10 @@ function animateProjectScreen(opening){
   if(opening&&projectOpen)startProjectMedia();
  }).catch(()=>{});
 }
-function closeProjectScreen(restoreFocus=true){
- if(!projectOpen)return;++projectOpenRevision;stopScreenScroll(projectScreen);projectOpen=false;
+function closeProjectScreen(restoreFocus=true,updateRoute=true){
+ if(!projectOpen)return;
+ if(updateRoute)writePortfolioRoute('works');
+ ++projectOpenRevision;stopScreenScroll(projectScreen);projectOpen=false;
  projectScreen.querySelectorAll('iframe').forEach(frame=>frame.remove());
  animateProjectScreen(false);syncBackdrop();
  updateProjectChrome();
@@ -1317,9 +1385,10 @@ function closeProjectScreen(restoreFocus=true){
 function openProjectScreen(id,trigger){
  const data=projectPages[id];if(!data)return;
  projectOrigin=trigger;projectOpen=true;
- closeTools();if(profileOpen)setProfile(false,false);else if(profileGenie)finishProfileMotion();
+ closeTools();if(profileOpen)setProfile(false,false,false);else if(profileGenie)finishProfileMotion();
  projectScreen.dataset.project=id;
  renderProjectPage(data);
+ writePortfolioRoute('project='+encodeURIComponent(id));
  const revision=++projectOpenRevision;
  stopScreenScroll(projectScreen);
  // A hidden element cannot reliably reset its scroll offset: show it before resetting.
@@ -1503,6 +1572,31 @@ function renderReelsProject(data,page){
  page.querySelector('.project-back-top').addEventListener('click',()=>projectScreen.scrollTo({top:0,behavior:reducedMotion()?'instant':'smooth'}));
 }
 
+
+function renderFanProject(data,page){
+ const toolRecords=data.tools.map(name=>toolsData.find(tool=>tool[1]===name)).filter(Boolean);
+ const icons=toolRecords.map(tool=>`<img class="cover-tool" src="${tool[2]}" alt="${tool[1]}" title="${tool[1]}" width="48" height="48">`).join('');
+ const tags=toolRecords.map(tool=>`<span class="project-tool-tag"><img src="${tool[2]}" alt="" width="24" height="24">${tool[1]}</span>`).join('');
+ const background=document.createElement('div');background.className='project-cover-background fan-cover-background';
+ background.innerHTML=`<div class="fan-cover-stills" aria-hidden="true">${data.films.map(film=>`<img src="https://i.ytimg.com/vi/${film.id}/hqdefault.jpg" alt="" width="480" height="360" decoding="async">`).join('')}</div>`;
+ projectScreen.prepend(background);
+ page.innerHTML=`<div class="project-content">
+  <section class="project-cover" aria-labelledby="project-title">
+   <p class="cover-edition">PERSONAL WORK · VIDEO EDITING</p>
+   <div class="cover-heading-row"><h2 id="project-title"><span>FAN EDITS</span><strong>개인 편집 작업</strong></h2><div class="cover-tools" aria-label="사용툴">${icons}</div></div>
+   <button class="cover-scroll" type="button">스크롤 해주세요<img src="assets/icons/scroll-down.svg" alt="" width="18" height="18"></button>
+  </section>
+  <section class="project-body" aria-label="작업 소개"><div class="project-body-inner">
+   <div class="project-intro"><h3>음악에 맞춰<br>다시 구성한 장면들.</h3><div class="project-intro-copy"><p>아티스트의 기존 영상에 음악과 그래픽을 더해 만든 개인 팬 에딧입니다. 장면을 고르고 순서를 구성하며, 타이포그래피와 화면 효과로 각 곡의 분위기를 표현했습니다.</p><p>Premiere Pro와 After Effects를 사용해 직접 편집한 작업 두 편을 소개합니다.</p></div></div>
+   <div class="project-facts project-facts-layout"><dl class="project-facts-overview"><div><dt>작업 형태</dt><dd>개인 작업 · 비공식 팬 에딧</dd></div><div><dt>제작연도</dt><dd>${data.year||'확인 예정'}</dd></div></dl><dl class="project-facts-main"><div class="project-role-fact"><dt>담당 작업</dt><dd>영상 편집 · 타이포그래피 · 화면 구성</dd></div><div><dt>사용툴</dt><dd class="project-tool-tags">${tags}</dd></div></dl></div>
+   ${data.films.map(film=>`<section class="fan-film-section" aria-labelledby="fan-title-${film.id}"><div class="fan-film-heading"><h3 id="fan-title-${film.id}">${film.title}</h3><p>${film.description}</p></div><div class="project-film"><iframe title="${film.title} 팬 에딧 전체 영상" data-src="https://www.youtube-nocookie.com/embed/${film.id}?playsinline=1&rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="project-film-caption"><a href="https://www.youtube.com/watch?v=${film.id}" target="_blank" rel="noopener noreferrer">YouTube에서 보기</a></div></section>`).join('')}
+   <footer class="project-end"><p>기존 아티스트 영상과 음원을 활용한 비공식 개인 작업입니다.</p><button type="button" class="project-back-top">맨 위로 ↑</button></footer>
+  </div></section></div>`;
+ if(location.protocol==='file:')page.querySelectorAll('.project-film').forEach((film,index)=>{const link=document.createElement('a');link.href='https://www.youtube.com/watch?v='+data.films[index].id;link.target='_blank';link.rel='noopener noreferrer';link.className='project-film-external';link.textContent=data.films[index].title+' · YouTube에서 영상 보기';film.replaceChildren(link)});
+ page.querySelector('.cover-scroll').addEventListener('click',()=>projectScreen.scrollTo({top:page.querySelector('.project-body').offsetTop,behavior:reducedMotion()?'instant':'smooth'}));
+ page.querySelector('.project-back-top').addEventListener('click',()=>projectScreen.scrollTo({top:0,behavior:reducedMotion()?'instant':'smooth'}));
+}
+
 function renderProjectPage(data){
  const page=projectScreen.querySelector('.project-page');
  projectScreen.querySelector('.project-cover-background')?.remove();
@@ -1510,6 +1604,7 @@ function renderProjectPage(data){
  projectScreen.classList.toggle('green-case',data.coverType==='cards');
  projectScreen.classList.toggle('detail-case',data.coverType==='detail');
  projectScreen.classList.toggle('reels-case',data.coverType==='reels');
+ if(data.coverType==='fan'){renderFanProject(data,page);return;}
  if(data.coverType==='reels'){renderReelsProject(data,page);return;}
  if(data.coverType==='cards'){renderGreenProject(data,page);return;}
  if(data.coverType==='detail'){renderDetailProject(data,page);return;}
@@ -1536,8 +1631,8 @@ function renderProjectPage(data){
   </section>
   <section class="project-body" aria-label="작업 소개">
    <div class="project-body-inner">
-    <div class="project-description project-intro"><div>${data.role?`<p class="project-role">${escape(data.role)}</p>`:''}<h3>${escape(data.heading)}</h3></div><p class="project-intro-copy">${escape(data.description)}</p></div>
-    <div class="project-facts project-facts-layout"><dl class="project-facts-overview"><div><dt>작업연도</dt><dd>${escape(data.year)}</dd></div><div><dt>기여도</dt><dd class="project-contribution">${Number.isFinite(data.contribution)?`<span class="contribution-dots" aria-hidden="true">${dots}</span><span>${data.contribution}%</span>`:'입력 예정'}</dd></div></dl><dl class="project-facts-main"><div><dt>사용툴</dt><dd class="project-tool-tags">${toolTags||'입력 예정'}</dd></div></dl></div>
+    <div class="project-description project-intro"><div><h3>${escape(data.heading)}</h3></div><p class="project-intro-copy">${escape(data.description)}</p></div>
+    <div class="project-facts project-facts-layout"><dl class="project-facts-overview"><div><dt>작업연도</dt><dd>${escape(data.year)}</dd></div><div><dt>기여도</dt><dd class="project-contribution">${Number.isFinite(data.contribution)?`<span class="contribution-dots" aria-hidden="true">${dots}</span><span>${data.contribution}%</span>`:'입력 예정'}</dd></div></dl><dl class="project-facts-main">${data.role?`<div class="project-role-fact"><dt>담당 작업</dt><dd>${escape(data.role)}</dd></div>`:''}<div><dt>사용툴</dt><dd class="project-tool-tags">${toolTags||'입력 예정'}</dd></div></dl></div>
     <div class="project-film"><iframe title="${escape(data.title)} 전체 영상" data-src="https://www.youtube-nocookie.com/embed/${data.youtube}?playsinline=1&rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
     <div class="project-film-caption"><div class="project-film-links"><a href="https://youtu.be/${data.youtube}" target="_blank" rel="noopener noreferrer">YouTube에서 보기 ↗</a>${data.notePlacement==='film'&&data.note?`<span class="project-film-note">${escape(data.note)}</span>`:''}${data.reference?`<span class="project-reference"><a href="https://youtu.be/${data.reference}" target="_blank" rel="noopener noreferrer">모작한 원본 영상 보기 ↗</a></span>`:''}</div>${data.reference?`<p class="project-film-note">${escape(data.note)}</p>`:''}</div>
     <footer class="project-end${data.reference||!data.note||data.notePlacement==='film'?' project-end-reference':''}">${!data.reference&&data.note&&data.notePlacement!=='film'?`<p>${escape(data.note)}</p>`:''}<button type="button" class="project-back-top">맨 위로 ↑</button></footer>
@@ -1555,7 +1650,7 @@ function startProjectMedia(){
  projectScreen.querySelectorAll('iframe[data-src]').forEach(frame=>{frame.src=frame.dataset.src;delete frame.dataset.src});
  const data=projectPages[projectScreen.dataset.project];
  const background=projectScreen.querySelector('.project-cover-background');
- if(!data?.cover||['cards','detail','reels','image'].includes(data.coverType)||!background||reducedMotion())return;
+ if(!data?.cover||['cards','detail','reels','image','fan'].includes(data.coverType)||!background||reducedMotion())return;
  const video=document.createElement('video');video.className='project-cover-video';video.muted=true;video.loop=true;video.playsInline=true;video.preload='auto';video.poster=data.poster;video.setAttribute('aria-hidden','true');
  video.src=data.cover.replace(/\.gif$/,'.mp4');
  video.addEventListener('canplay',()=>{
@@ -1604,8 +1699,31 @@ document.querySelectorAll('.menu').forEach(menu=>{const trigger=menu.querySelect
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(projectOpen){e.preventDefault();closeProjectScreen();return}if(profileOpen){e.preventDefault();closeProfile();return}if(toolsOpen){e.preventDefault();closeTools();return}document.querySelectorAll('.menu').forEach(m=>{m.classList.remove('open');m.querySelector('button').setAttribute('aria-expanded','false')});if(toolsOpen)toggleTools();document.activeElement.blur()}});
 document.addEventListener('pointerdown',e=>{if(!e.target.closest('.menu'))document.querySelectorAll('.menu').forEach(m=>{m.classList.remove('open');m.querySelector('button').setAttribute('aria-expanded','false')})});
 addEventListener('resize',()=>{layoutDock();initial();if(activeCategory){savedPositions=new Map(categoryProjects.map(el=>[el,{x:el.offsetLeft,y:el.offsetTop}]));alignCategory()}});
+
+function writePortfolioRoute(route){
+ if(!routeReady||applyingRoute)return;
+ const hash='#'+route;if(location.hash===hash)return;
+ history.pushState(null,'',hash);
+}
+function applyPortfolioRoute(){
+ const hash=location.hash.slice(1);
+ let id='';try{if(hash.startsWith('project='))id=decodeURIComponent(hash.slice(8))}catch{}
+ applyingRoute=true;
+ try{
+  if(id&&projectPages[id]){
+   if(!projectOpen||projectScreen.dataset.project!==id)openProjectScreen(id,document.getElementById(id));
+  }else if(hash==='works'){
+   closeProjectScreen(false,false);if(profileOpen)setProfile(false,false,false);closeTools();
+  }else{
+   closeProjectScreen(false,false);closeTools();if(!profileOpen)setProfile(true,false,false);
+  }
+ }finally{applyingRoute=false}
+}
+addEventListener('popstate',applyPortfolioRoute);
+addEventListener('hashchange',applyPortfolioRoute);
+
 layoutDock();initial();
-setProfile(true,false);
+routeReady=true;applyPortfolioRoute();
 
 // Animate actual text nodes; fixed character widths keep glitch substitutions from shifting the layout.
 (()=>{
